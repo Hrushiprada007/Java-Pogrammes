@@ -23,6 +23,10 @@ abstract class Truck {
 
     // Abstract method
     abstract void run();
+    void walk(){
+        System.out.println("Truck cann't walk only move");
+    }
+
 }
 
 class Car2 extends Truck {
@@ -39,11 +43,18 @@ class Car2 extends Truck {
         System.out.println("Truck can fly without any fan");
     }
 
+    @Override
+    void walk() {
+        super.walk();
+        System.out.println("Car colour is white");
+    }
+
     public static void main(String[] args) {
         Truck t1 = new Car2();
         t1.run();
-       // Car2 c2=new Car2();
-       // c2.fly();
+//        Car2 c2=new Car2();
+//        c2.fly();
+//        c2.walk();
 
 
         // If you want to access fly()
