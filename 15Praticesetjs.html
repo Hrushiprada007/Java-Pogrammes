@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #777;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let age=prompt("Enter a age value:");
+        age=Number(age);
+        let runAgain=true;
+        while(runAgain){
+        const Elegible=(age)=>{
+            return age >=18? true:false;
+        }
+        if(age<0){
+            console.error("Please enter a valid age");
+            break;
+        }
+        if(Elegible(age)){
+            alert("You can acess this website");
+        }
+    
+        else{
+            alert("you can't access , Better luck next time ?");
+        }
+        runAgain=confirm("Do you want to this website run again ?");
+    }
+    </script>
+
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <h2>About This Page</h2>
+        <p>This is a small and simple HTML webpage built using basic HTML and CSS. You can customize the content and design as needed.</p>
+    </main>
+
+    <footer>
+        &copy; 2025 My Simple Webpage
+    </footer>
